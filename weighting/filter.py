@@ -23,4 +23,4 @@ def r468(f):
 
 if __name__ == '__main__':
     for f in ITU_R_468_FREQUENCIES:
-        print(r468(f))
+        print(round(r468(f), 1))
