@@ -3,7 +3,7 @@ from math import log10, sqrt
 from frequencies import ITU_R_468_FREQUENCIES
 
 
-def r468(f):
+def r468(f, k=1):
     f2 = f**2
     f4 = f**4
     f6 = f**6
@@ -18,9 +18,21 @@ def r468(f):
     h23 = 5.559488023498642
     h2 = h21 * (10**-19) * f5 - h22 * (10**-11) * f3 + h23 * (10**-4) * f
     rITU = (1.246332637532143 * (10**-4) * f) / sqrt(h1**2 + h2**2)
-    return 18.2 + 20 * log10(rITU)
+    if k == 1:
+        gain = 18.2
+    elif k == 2:
+        gain = 12.6
+    else:
+        raise ValueError
+    return gain + 20 * log10(rITU)
 
 
 if __name__ == '__main__':
+
+    print('\nAt 1 kHz:\n')
     for f in ITU_R_468_FREQUENCIES:
-        print(round(r468(f), 1))
+        print(round(r468(f, 1), 1))
+
+    print('\nAt 2 kHz:\n')
+    for f in ITU_R_468_FREQUENCIES:
+        print(round(r468(f, 2), 1))
