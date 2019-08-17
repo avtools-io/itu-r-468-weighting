@@ -1,3 +1,12 @@
+DB_TOLERANCE = 0.08356063973787187
+# DB_GAIN_1KHZ was determined with factor 8.1333
+DB_GAIN_1KHZ = 18.20533583440004
+# DB_GAIN_2KHZ was determined by subtracting the 2 kHz from the 1 kHz dB gain
+# values of the r468 function with '1kHz' option and then subctracting the
+# result from the DB_GAIN_1KHZ value
+DB_GAIN_2KHZ = 12.5761228906165
+
+
 ITU_R_468_FREQS_AND_EXPECTED_VALUES = [
     # [<frequency in Hz>, <expected value in dB>]
     [31.5, -29.9],

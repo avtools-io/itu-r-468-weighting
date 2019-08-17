@@ -1,4 +1,6 @@
 from math import log10, sqrt
+from weighting.constants import DB_GAIN_1KHZ
+from weighting.constants import DB_GAIN_2KHZ
 
 
 def r468(f, kHz='1kHz'):
@@ -40,27 +42,10 @@ def r468(f, kHz='1kHz'):
     rITU = (1.246332637532143*(10**-4)*f) / sqrt(h1**2 + h2**2)
 
     if kHz == '1kHz':
-        gain = 18.2
+        gain = DB_GAIN_1KHZ
     elif kHz == '2kHz':
-        gain = 12.6
+        gain = DB_GAIN_2KHZ
     else:
         raise ValueError
 
     return gain + 20*log10(rITU)
-
-
-if __name__ == '__main__':
-    from frequencies import ITU_R_468_FREQS_AND_EXPECTED_VALUES
-
-    # Example usage:
-
-    print('\nAt 1 kHz:\n')
-    for f in ITU_R_468_FREQS_AND_EXPECTED_VALUES:
-        print(round(r468(f[0], '1kHz'), 1))
-
-    print('\nAt 2 kHz:\n')
-    for f in ITU_R_468_FREQS_AND_EXPECTED_VALUES:
-        print(round(r468(f[0], '2kHz'), 1))
-
-    for i in range(1, 96001):
-        r468(i, '1kHz')
