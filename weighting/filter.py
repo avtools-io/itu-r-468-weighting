@@ -1,7 +1,7 @@
 from math import log10, sqrt
 
 
-def r468(f, kHz=1):
+def r468(f, kHz='1kHz'):
     """Takes a frequency value and returns a weighted dB value.
 
     For weightening, the ITU-R-468 standard is followed.
@@ -18,8 +18,8 @@ def r468(f, kHz=1):
     ----------
     f : float
         Frequency values should be values from 1 to 96000.
-    kHz : int
-        Choose 1kHz or 2kHz filtering, possible values: 1 or 2 (default 1).
+    kHz : string
+        Choose '1kHz' or '2kHz' filtering (default '1kHz').
 
     Returns
     -------
@@ -34,9 +34,9 @@ def r468(f, kHz=1):
     h2 = h2_1*(10**-19)*f5 - h2_2*(10**-11)*f3 + h2_3*(10**-4)*f
     rITU = (1.246332637532143*(10**-4)*f) / sqrt(h1**2 + h2**2)
 
-    if kHz == 1:
+    if kHz == '1kHz':
         gain = 18.2
-    elif kHz == 2:
+    elif kHz == '2kHz':
         gain = 12.6
     else:
         raise ValueError
@@ -47,13 +47,15 @@ def r468(f, kHz=1):
 if __name__ == '__main__':
     from frequencies import ITU_R_468_FREQUENCIES
 
+    # Example usage:
+
     print('\nAt 1 kHz:\n')
     for f in ITU_R_468_FREQUENCIES:
-        print(round(r468(f, 1), 1))
+        print(round(r468(f, '1kHz'), 1))
 
     print('\nAt 2 kHz:\n')
     for f in ITU_R_468_FREQUENCIES:
-        print(round(r468(f, 2), 1))
+        print(round(r468(f, '2kHz'), 1))
 
     for i in range(1, 48001):
-        r468(i, 1)
+        r468(i, '1kHz')
