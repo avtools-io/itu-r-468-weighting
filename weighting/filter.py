@@ -46,7 +46,7 @@ def r468(f, kHz='1kHz'):
     else:
         raise ValueError
 
-    return gain + 20 * log10(rITU)
+    return gain + 20*log10(rITU)
 
 
 if __name__ == '__main__':
