@@ -1,7 +1,5 @@
 from math import log10, sqrt
 
-from frequencies import ITU_R_468_FREQUENCIES
-
 
 def r468(f, kHz=1):
     """Takes a frequency value and returns a weighted dB value.
@@ -47,6 +45,7 @@ def r468(f, kHz=1):
 
 
 if __name__ == '__main__':
+    from frequencies import ITU_R_468_FREQUENCIES
 
     print('\nAt 1 kHz:\n')
     for f in ITU_R_468_FREQUENCIES:
