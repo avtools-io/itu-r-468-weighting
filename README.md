@@ -7,7 +7,7 @@ Dev branch: [![Build Status](https://travis-ci.com/cinelexi/py-itu-r-468-weighti
 
 ## Introduction
 
-This projects consists of a sole function named `r468`. Which can be found in `weighting/filter.py`.
+This project consists of a sole function named `r468`. Which can be found in `weighting/filter.py`.
 
 The function `r468(f, kHz="1kHz")` takes a frequency value and returns a weighted dB value. For weightening, the ITU-R 468 standard is followed.
 
