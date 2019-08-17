@@ -62,5 +62,5 @@ if __name__ == '__main__':
     for f in ITU_R_468_FREQUENCIES:
         print(round(r468(f, '2kHz'), 1))
 
-    for i in range(1, 48001):
+    for i in range(1, 96001):
         r468(i, '1kHz')
