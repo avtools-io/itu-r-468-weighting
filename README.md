@@ -9,7 +9,7 @@ Dev branch: [![Build Status](https://travis-ci.com/cinelexi/py-itu-r-468-weighti
 
 This projects consists of a sole function named `r468`. Which can be found in `weighting/filter.py`.
 
-The function `r468(f, kHz="1kHz")` Takes a frequency value and returns a weighted dB value. For weightening, the ITU-R-468 standard is followed.
+The function `r468(f, kHz="1kHz")` Takes a frequency value and returns a weighted dB value. For weightening, the ITU-R 468 standard is followed.
 
 The math for this is taken from Wikipedia (as of 2019-08-08):
 
@@ -27,7 +27,7 @@ f: float
 
 kHz: str
 
-- Choose "1kHz" or "2kHz" filtering (default "1kHz").
+- Choose "1kHz" or "2kHz" as an weighting option (default "1kHz"). The weighting curves have the same form for both options. They are shifted in a way, that the gain is 0 dB at the given frequency ("1kHz" or "2kHz").
 
 ## Returns
 
