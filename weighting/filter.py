@@ -19,14 +19,14 @@ def r468(f, kHz=1):
     Parameters
     ----------
     f : float
-        frequency, should be from 1.0 to 96000.0
+        Frequency values should be values from 1 to 96000.
     kHz : int
-        choose 1kHz or 2kHz filtering, possible values: 1 or 2 (default 1)
+        Choose 1kHz or 2kHz filtering, possible values: 1 or 2 (default 1).
 
     Returns
     -------
     float
-        The dB weighted value of the frequency
+        The dB weighted value of the frequency.
     """
 
     f2, f3, f4, f5, f6 = f**2, f**3, f**4, f**5, f**6
