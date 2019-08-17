@@ -21,10 +21,10 @@ def r468(f, kHz="1kHz"):
     f : float
         The frequency value must be a value from greater 0 to 96000.
     kHz : string
-        Choose "1kHz" or "2kHz" as an weighting option (default "1kHz").
-        The weighting curves have the same form for both options.
+        Choose `1kHz` or `2kHz` as an weighting option (default `1kHz`).
+        The weighting curves have the same shape for both options.
         They are shifted in a way, that the gain is 0 dB
-        at the given frequency ("1kHz" or "2kHz").
+        at the given frequency (`1kHz` or `2kHz`).
 
     Returns
     -------
@@ -35,7 +35,7 @@ def r468(f, kHz="1kHz"):
     ------
     ValueError
         If parameter f is not greater 0 and smaller or equal to 96000.
-        If parameter kHz is used but not "1kHz" or "2kHz".
+        If parameter `kHz` is used, but is not equal to `1kHz` or `2kHz`.
     """
 
     if f > 0 and f <= 96000:
