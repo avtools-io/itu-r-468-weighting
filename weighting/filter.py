@@ -37,3 +37,6 @@ if __name__ == '__main__':
     print('\nAt 2 kHz:\n')
     for f in ITU_R_468_FREQUENCIES:
         print(round(r468(f, 2), 1))
+
+    for i in range(1, 48001):
+        r468(i, 1)
