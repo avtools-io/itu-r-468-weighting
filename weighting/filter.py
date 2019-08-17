@@ -17,7 +17,7 @@ def r468(f, kHz='1kHz'):
     Parameters
     ----------
     f : float
-        Frequency values must be values from greater 0 to 96000.
+        The frequency value must be a value from greater 0 to 96000.
     kHz : string
         Choose '1kHz' or '2kHz' filtering (default '1kHz').
 
