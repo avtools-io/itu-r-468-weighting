@@ -17,7 +17,7 @@ The math for this is taken from Wikipedia (as of 2019-08-08):
 
 Shortened link to the archived Wikipedia page (as of 2019-08-08):
 
-- https://bit.ly/2P29qOh
+- https://bit.ly/2TJqrLN
 
 ## Parameters
 

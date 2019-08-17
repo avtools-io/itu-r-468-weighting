@@ -14,7 +14,7 @@ def r468(f, kHz="1kHz"):
 
     Shortened link to the archived Wikipedia page (as of 2019-08-08):
 
-      - https://bit.ly/2P29qOh
+      - https://bit.ly/2TJqrLN
 
     Parameters
     ----------
