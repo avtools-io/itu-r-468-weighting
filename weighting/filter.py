@@ -17,7 +17,7 @@ def r468(f, kHz='1kHz'):
     Parameters
     ----------
     f : float
-        Frequency values should be values from 1 to 96000.
+        Frequency values must be values from greater 0 to 96000.
     kHz : string
         Choose '1kHz' or '2kHz' filtering (default '1kHz').
 
@@ -26,6 +26,11 @@ def r468(f, kHz='1kHz'):
     float
         The dB weighted value of the frequency.
     """
+
+    if f > 0 and f <= 96000:
+        pass
+    else:
+        raise ValueError
 
     f2, f3, f4, f5, f6 = f**2, f**3, f**4, f**5, f**6
     h1_1, h1_2, h1_3 = -4.737338981378384, 2.043828333606125, 1.363894795463638
