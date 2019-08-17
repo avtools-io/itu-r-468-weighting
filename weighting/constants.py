@@ -39,7 +39,7 @@ ITU_R_468__FREQS = [
 ]
 
 ITU_R_468__FREQS_AND_EXP_VALS__1KHZ = [
-    # [<frequency in Hz>, <expected value in dB>]
+    # [<frequency in Hz>, <expected value in dB>],
     [31.5, -29.9],
     [63, -23.9],
     [100, -19.8],
@@ -64,7 +64,7 @@ ITU_R_468__FREQS_AND_EXP_VALS__1KHZ = [
 ]
 
 ITU_R_468__FREQS_AND_EXP_VALS__2KHZ = [
-    # [<frequency in Hz>, <expected value in dB>]
+    # [<frequency in Hz>, <expected value in dB>],
     [31.5, -35.5],
     [63, -29.5],
     [100, -25.4],

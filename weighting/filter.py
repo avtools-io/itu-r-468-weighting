@@ -10,11 +10,11 @@ def r468(f, kHz="1kHz"):
 
     The math for this is taken from Wikipedia (as of 2019-08-08):
 
-    https://en.wikipedia.org/wiki/ITU-R_468_noise_weighting
+      - https://en.wikipedia.org/wiki/ITU-R_468_noise_weighting
 
     Shortened link to the archived Wikipedia page (as of 2019-08-08):
 
-    https://bit.ly/2P29qOh
+      - https://bit.ly/2P29qOh
 
     Parameters
     ----------
