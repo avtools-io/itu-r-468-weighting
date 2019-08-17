@@ -1,5 +1,5 @@
 # DB_TOLERANCE was determined by taking the maximum value of the difference
-# between computed ('1kHz' and '2kHz' option) and expected ITU-R 468 values.
+# between computed ("1kHz" and "2kHz" option) and expected ITU-R 468 values.
 # If the r468 function improves over time, this constant should converge to 0.
 DB_TOLERANCE = 0.08356063973787187
 
@@ -8,7 +8,7 @@ DB_TOLERANCE = 0.08356063973787187
 DB_GAIN_1KHZ = 18.20533583440004
 
 # DB_GAIN_2KHZ was determined by subtracting the dB gain value
-# of the r468 function, with a frequency input of 1000 Hz and '1kHz' option,
+# of the r468 function, with a frequency input of 1000 Hz and "1kHz" option,
 # from the value of the DB_GAIN_1KHZ constants.
 # If the r468 function improves over time, this constant could change.
 DB_GAIN_2KHZ = 12.609462235437508
