@@ -44,5 +44,6 @@ if __name__ == "__main__":
     print("Value <= Tolerance?:", max_2k <= DB_TOLERANCE)
 
     # Run all possible integer values
-    for i in range(1, 96001):
-        r468(i, "1kHz")
+    for _ in range(30):
+        for i in range(1, 96001):
+            r468(i, "1kHz")
