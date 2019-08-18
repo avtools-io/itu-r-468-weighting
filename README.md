@@ -13,10 +13,6 @@ The math for this project is taken from Wikipedia (as of 2019-08-08):
 
 - https://en.wikipedia.org/wiki/ITU-R_468_noise_weighting ([archived version](https://web.archive.org/web/20190808084536/https:/en.wikipedia.org/wiki/ITU-R_468_noise_weighting))
 
-## Function Description
-
-Can be found in the docstring of the function and on [GitHub](https://github.com/cinelexi/py-itu-r-468-weighting/blob/dev/weighting/filter.py).
-
 ## Installation
 
 ```
@@ -28,5 +24,42 @@ pip install itu_r_468_weighting
 ```
 from itu_r_468_weighting.filter import r468
 
-r468(2000, "1khz")
+r468(1000, "1khz")
+r468(1000, "2khz")
 ```
+
+## Function Description
+
+`r468(frequency_hz, khz_option)`
+
+- Takes a frequency value and returns a weighted dB value.
+
+### Parameters
+
+`frequency_hz` : `float`
+
+- The frequency value (in Hz) must be a value greater 0.
+
+`khz_option` : `str`
+
+- Choose `1khz` or `2khz` as an weighting option.
+  The weighting curves have the same shape for both options.
+  They are shifted in a way, that the gain is 0.0 dB
+  at the given frequency (1 or 2 kHz).
+
+### Returns
+
+`float`
+
+- The dB weighted value of the frequency.
+
+### Raises
+
+`ValueError`
+
+- If parameter `frequency_hz` is not greater 0.
+- If parameter `khz_option` is not equal to `1khz` or `2khz`.
+
+## Developement
+
+This project is hosted on [GitHub](https://github.com/cinelexi/py-itu-r-468-weighting).
