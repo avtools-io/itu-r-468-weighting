@@ -6,7 +6,7 @@ from weighting.constants import DB_GAIN_1KHZ, DB_GAIN_2KHZ
 def r468(f, kHz="1kHz"):
     """Takes a frequency value and returns a weighted dB value.
 
-    For weightening, the ITU-R 468 standard is followed.
+    For weightening, the ITU-R BS.468-4 standard is followed.
 
     The math for this is taken from Wikipedia (as of 2019-08-08):
 
