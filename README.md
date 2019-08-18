@@ -1,4 +1,4 @@
-# itu_r_468_weighting
+# itu-r-468-weighting
 
 A zero dependency Python ITU-R 468 noise weighting filter (1 and 2 kHz)
 
@@ -16,10 +16,10 @@ The math for this project is taken from Wikipedia (as of 2019-08-08):
 ## Installation
 
 ```
-pip install itu_r_468_weighting
+pip install itu-r-468-weighting
 ```
 
-More infos on the [project page](https://pypi.org/project/itu_r_468_weighting/) on PyPI.
+More infos on the [project page](https://pypi.org/project/itu-r-468-weighting/) on PyPI.
 
 ## Example Usage
 
@@ -29,6 +29,8 @@ from itu_r_468_weighting.filter import r468
 r468(1000, "1khz")
 r468(1000, "2khz")
 ```
+
+Notice: underscores ("\_") instead of pip-style dashes ("-") are used for the project name on import.
 
 ## Function Description
 
@@ -64,4 +66,4 @@ r468(1000, "2khz")
 
 ## Developement
 
-This project is hosted on [GitHub](https://github.com/cinelexi/itu_r_468_weighting).
+This project is hosted on [GitHub](https://github.com/cinelexi/itu-r-468-weighting).
