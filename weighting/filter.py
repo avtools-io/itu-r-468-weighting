@@ -3,7 +3,7 @@ from math import log10, sqrt
 from weighting.constants import DB_GAIN_1KHZ, DB_GAIN_2KHZ
 
 
-def r468(f, kHz="1kHz"):
+def r468(f, kHz):
     """Takes a frequency value and returns a weighted dB value.
 
     For weightening, the ITU-R BS.468-4 standard is followed.
@@ -27,7 +27,7 @@ def r468(f, kHz="1kHz"):
     ------
     ValueError
         If parameter f is not greater 0 and smaller or equal to 96000.
-        If parameter `kHz` is used, but is not equal to `1kHz` or `2kHz`.
+        If parameter is not equal to `1kHz` or `2kHz`.
     """
 
     if f > 0 and f <= 96000:

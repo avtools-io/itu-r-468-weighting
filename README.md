@@ -9,7 +9,7 @@ Dev branch: [![Build Status](https://travis-ci.com/cinelexi/py-itu-r-468-weighti
 
 This project consists of a sole function named `r468`. Which can be found in `weighting/filter.py`.
 
-The function `r468(f, kHz="1kHz")` takes a frequency value and returns a weighted dB value. For weightening, the [ITU-R BS.468-4](https://www.itu.int/rec/R-REC-BS.468-4-198607-I/en) standard is followed.
+The function `r468(f, kHz)` takes a frequency value and returns a weighted dB value. For weightening, the [ITU-R BS.468-4](https://www.itu.int/rec/R-REC-BS.468-4-198607-I/en) standard is followed.
 
 The math for this is taken from Wikipedia (as of 2019-08-08):
 
@@ -40,7 +40,7 @@ Shortened link to the archived Wikipedia page (as of 2019-08-08):
 `ValueError`:
 
 - If parameter `f` is not greater 0 and smaller or equal to 96000.
-- If parameter `kHz` is used, but is not equal to `1kHz` or `2kHz`.
+- If parameter is not equal to `1kHz` or `2kHz`.
 
 ## Examples
 
