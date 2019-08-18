@@ -12,7 +12,7 @@ setup(
     description="A zero dependency Python ITU-R 468 noise weighting filter (1 and 2 kHz)",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/cinelexi/py-itu-r-468-weighting",
+    url="https://github.com/cinelexi/itu_r_468_weighting",
     author="Alexis Michaltsis",
     author_email="a.michaltsis@gmail.com",
     license="MIT",
