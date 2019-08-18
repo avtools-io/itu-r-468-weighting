@@ -30,7 +30,7 @@ def r468(f, kHz):
         If parameter is not equal to `1kHz` or `2kHz`.
     """
 
-    if f > 0 and f <= 96000:
+    if f > 0:
         pass
     else:
         raise ValueError
