@@ -13,8 +13,8 @@ def r468(frequency_hz, khz_option):
     ----------
     frequency_hz : float
         The frequency value (in Hz) must be a value greater 0.
-    khz_option : string
-        Choose `1khz` or `2khz` as an weighting option (default `1khz`).
+    khz_option : str
+        Choose `1khz` or `2khz` as an weighting option.
         The weighting curves have the same shape for both options.
         They are shifted in a way, that the gain is 0.0 dB
         at the given frequency (1 or 2 kHz).
