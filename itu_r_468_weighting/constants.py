@@ -1,17 +1,19 @@
 # DB_TOLERANCE was determined by taking the maximum value of the difference
-# between computed ("1kHz" and "2kHz" option) and expected ITU-R 468 values.
+# between computed ("1khz" and "2khz" option) and expected ITU-R 468 values.
 # If the r468 function improves over time, this constant should converge to 0.
-DB_TOLERANCE = 0.08356063973787187
+DB_TOLERANCE = 0.07184434988229427
 
-# DB_GAIN_1KHZ was determined with the multiplication factor of 8.1333.
+# DB_GAIN_1KHZ was first determined with the multiplication factor of 8.1333
+# (+18.20533583440004 dB). From there on the value was modified to find
+# a better one, by converging the distance to 0 at 1000 and 125000 Hz.
 # If the r468 function improves over time, this constant could change.
-DB_GAIN_1KHZ = 18.20533583440004
+DB_GAIN_1KHZ = 18.246265068039158
 
-# DB_GAIN_2KHZ was determined by subtracting the dB gain value
-# of the r468 function, with a frequency input of 1000 Hz and "1kHz" option,
-# from the value of the DB_GAIN_1KHZ constants.
+# DB_GAIN_2KHZ was determined by substracting the dB Value at 2000 Hz from
+# the "1khz" result of the constant DB_GAIN_1KHZ, plus adding the value
+# at 1000 Hz from the "1khz" result to the constant of DB_GAIN_1KHZ.
 # If the r468 function improves over time, this constant could change.
-DB_GAIN_2KHZ = 12.609462235437508
+DB_GAIN_2KHZ = 12.617052124255618
 
 ITU_R_468__FREQS = [
     # <frequency in Hz>,
@@ -35,7 +37,7 @@ ITU_R_468__FREQS = [
     14000,
     16000,
     20000,
-    31500
+    31500,
 ]
 
 ITU_R_468__FREQS_AND_EXP_VALS__1KHZ = [
@@ -60,7 +62,7 @@ ITU_R_468__FREQS_AND_EXP_VALS__1KHZ = [
     [14000, -5.3],
     [16000, -11.7],
     [20000, -22.2],
-    [31500, -42.7]
+    [31500, -42.7],
 ]
 
 ITU_R_468__FREQS_AND_EXP_VALS__2KHZ = [
@@ -85,5 +87,5 @@ ITU_R_468__FREQS_AND_EXP_VALS__2KHZ = [
     [14000, -10.9],
     [16000, -17.3],
     [20000, -27.8],
-    [31500, -48.3]
+    [31500, -48.3],
 ]
