@@ -7,12 +7,12 @@ with open(path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="itu_r_468_weighting",
-    version="1.0.2",
+    name="itu-r-468-weighting",
+    version="1.0.3",
     description="A zero dependency Python ITU-R 468 noise weighting filter (1 and 2 kHz)",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/cinelexi/itu_r_468_weighting",
+    url="https://github.com/cinelexi/itu-r-468-weighting",
     author="Alexis Michaltsis",
     author_email="a.michaltsis@gmail.com",
     license="MIT",
