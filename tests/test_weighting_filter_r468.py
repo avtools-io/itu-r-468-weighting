@@ -1,11 +1,11 @@
 import pytest
 
-from weighting.constants import (
+from itu_r_468_weighting.constants import (
     DB_TOLERANCE,
     ITU_R_468__FREQS_AND_EXP_VALS__1KHZ,
     ITU_R_468__FREQS_AND_EXP_VALS__2KHZ,
 )
-from weighting.filter import r468
+from itu_r_468_weighting.filter import r468
 
 
 @pytest.mark.parametrize(

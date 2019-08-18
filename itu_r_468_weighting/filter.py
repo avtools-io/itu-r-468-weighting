@@ -1,6 +1,6 @@
 from math import log10, sqrt
 
-from weighting.constants import DB_GAIN_1KHZ, DB_GAIN_2KHZ
+from itu_r_468_weighting.constants import DB_GAIN_1KHZ, DB_GAIN_2KHZ
 
 
 def r468(frequency_hz, khz_option):

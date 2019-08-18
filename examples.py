@@ -1,10 +1,10 @@
-from weighting.constants import (
+from itu_r_468_weighting.constants import (
     DB_TOLERANCE,
     ITU_R_468__FREQS,
     ITU_R_468__FREQS_AND_EXP_VALS__1KHZ,
     ITU_R_468__FREQS_AND_EXP_VALS__2KHZ,
 )
-from weighting.filter import r468
+from itu_r_468_weighting.filter import r468
 
 # Example usage:
 if __name__ == "__main__":
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     print("Tolerance:", DB_TOLERANCE)
     print("Value <= Tolerance?:", max_2k <= DB_TOLERANCE)
 
-    # Run all integer values from 1 up to 192000
+    # Run all integer values from 1 up to 192000 x times
     for _ in range(15):
         for i in range(1, 192001):
             r468(i, "1khz")

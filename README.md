@@ -7,16 +7,26 @@ Dev branch: [![Build Status](https://travis-ci.com/cinelexi/py-itu-r-468-weighti
 
 ## Introduction
 
-This project consists of a sole function named `r468`. Which can be found in `weighting/filter.py`. The function takes a frequency value and returns a weighted dB value. For weightening, the [ITU-R BS.468-4](https://www.itu.int/rec/R-REC-BS.468-4-198607-I/en) standard and the [SMPTE RP 2054:2010](https://ieeexplore.ieee.org/document/7290513) recommended practice are followed.
+This project consists of a sole function named `r468`. The function takes a frequency value and returns a weighted dB value. For weightening, the [ITU-R BS.468-4](https://www.itu.int/rec/R-REC-BS.468-4-198607-I/en) standard and the [SMPTE RP 2054:2010](https://ieeexplore.ieee.org/document/7290513) recommended practice are followed.
 
 The math for this project is taken from Wikipedia (as of 2019-08-08):
 
 - https://en.wikipedia.org/wiki/ITU-R_468_noise_weighting ([archived version](https://web.archive.org/web/20190808084536/https:/en.wikipedia.org/wiki/ITU-R_468_noise_weighting))
 
-## Function Usage and Description
+## Function Description
 
 Can be found in the docstring of the function and on [GitHub](https://github.com/cinelexi/py-itu-r-468-weighting/blob/dev/weighting/filter.py).
 
-## Examples
+## Installation
 
-Some example usage can be found in `examples.py`
+```
+pip install itu_r_468_weighting
+```
+
+## Example Usage
+
+```
+from itu_r_468_weighting.filter import r468
+
+r468(2000, "1khz")
+```
