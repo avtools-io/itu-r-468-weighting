@@ -19,6 +19,8 @@ The math for this project is taken from Wikipedia (as of 2019-08-08):
 pip install itu_r_468_weighting
 ```
 
+More infos on the [project page](https://pypi.org/project/itu-r-468-weighting/) on PyPI.
+
 ## Example Usage
 
 ```
