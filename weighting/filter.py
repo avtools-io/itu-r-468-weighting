@@ -15,8 +15,8 @@ def r468(frequency_hz, khz_option):
     khz_option : string
         Choose `1khz` or `2khz` as an weighting option (default `1khz`).
         The weighting curves have the same shape for both options.
-        They are shifted in a way, that the gain is 0 dB
-        at the given frequency (`1khz` or `2khz`).
+        They are shifted in a way, that the gain is 0.0 dB
+        at the given frequency (1 or 2 kHz).
 
     Returns
     -------
