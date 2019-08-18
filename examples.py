@@ -10,7 +10,6 @@ from weighting.filter import r468
 if __name__ == "__main__":
 
     print("\nSimple usage examples:\n")
-    print("r468(1000):", r468(1000))
     print("r468(1000, '1kHz'):", r468(1000, "1kHz"))
     print("r468(1000, '2kHz'):", r468(1000, "2kHz"))
 
