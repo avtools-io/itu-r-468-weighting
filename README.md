@@ -19,7 +19,7 @@ The math for this project is taken from Wikipedia (as of 2019-08-08):
 pip install itu-r-468-weighting
 ```
 
-More infos on the [project page](https://pypi.org/project/itu-r-468-weighting/) on PyPI.
+More infos on the [project page](https://pypi.org/project/itu-r-468-weighting/) at PyPI.
 
 ## Example Usage
 

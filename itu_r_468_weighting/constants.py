@@ -11,7 +11,7 @@ DB_GAIN_1KHZ = 18.246265068039158
 
 # DB_GAIN_2KHZ was determined by substracting the dB value at 2000 Hz (of
 # the "1khz" option result) from and adding the value at 1000 Hz (of the "1khz"
-# option result) to the constant value of DB_GAIN_1KHZ:
+# option result) to the value of DB_GAIN_1KHZ:
 # DB_GAIN_2KHZ = DB_GAIN_1KHZ - r468(2000, "1khz") + r468(1000, "1khz")
 DB_GAIN_2KHZ = 12.617052124255618
 
