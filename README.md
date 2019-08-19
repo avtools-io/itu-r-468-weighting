@@ -1,6 +1,6 @@
 # itu-r-468-weighting
 
-A zero dependency Python ITU-R 468 noise weighting filter (1 and 2 kHz)
+A zero dependency Python ITU-R 468 noise weighting filter (1 kHz and 2 kHz)
 
 Master branch: [![Build Status](https://travis-ci.com/cinelexi/py-itu-r-468-weighting.svg?branch=master)](https://travis-ci.com/cinelexi/py-itu-r-468-weighting?branch=master) [![Coverage Status](https://coveralls.io/repos/github/cinelexi/py-itu-r-468-weighting/badge.svg?branch=master)](https://coveralls.io/github/cinelexi/py-itu-r-468-weighting?branch=master) \
 Dev branch: [![Build Status](https://travis-ci.com/cinelexi/py-itu-r-468-weighting.svg?branch=dev)](https://travis-ci.com/cinelexi/py-itu-r-468-weighting?branch=dev) [![Coverage Status](https://coveralls.io/repos/github/cinelexi/py-itu-r-468-weighting/badge.svg?branch=dev)](https://coveralls.io/github/cinelexi/py-itu-r-468-weighting?branch=dev)
@@ -29,8 +29,6 @@ from itu_r_468_weighting.filter import r468
 r468(1000, "1khz")
 r468(1000, "2khz")
 ```
-
-Notice: underscores ("\_") instead of pip-style dashes ("-") are used for the project name on import.
 
 ## Function Description
 
