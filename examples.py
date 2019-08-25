@@ -60,10 +60,12 @@ if __name__ == "__main__":
     for i in range(24001):
         db_2k.append(r468(i, "2khz"))
 
-    plt.plot(db_1k)
-    plt.plot(db_2k)
+    plt.plot(db_1k, "-b", label="1 kHz")
+    plt.plot(db_2k, "-r", label="2 kHz")
+    plt.legend(loc="upper left")
     plt.xscale("symlog", linthreshy=0.015)
     plt.grid(True)
+    plt.xlabel("Hz")
     plt.ylabel("dB")
     plt.axis([10, 100e3, -50, 20])
     plt.show()
@@ -76,9 +78,11 @@ if __name__ == "__main__":
     for i in range(24001):
         db_2k_norm.append(r468(i, "2khz", "norm"))
 
-    plt.plot(db_1k_norm)
-    plt.plot(db_2k_norm)
-    plt.ylabel("normalized")
+    plt.plot(db_1k_norm, "-b", label="1 kHz")
+    plt.plot(db_2k_norm, "-r", label="2 kHz")
+    plt.legend(loc="upper left")
+    plt.xlabel("Hz")
+    plt.ylabel("Factor")
     plt.show()
 
     # # Run all integer values from 1 up to 192000 x times
