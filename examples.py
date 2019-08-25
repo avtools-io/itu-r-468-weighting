@@ -62,7 +62,10 @@ if __name__ == "__main__":
 
     plt.plot(db_1k)
     plt.plot(db_2k)
+    plt.xscale("symlog", linthreshy=0.015)
+    plt.grid(True)
     plt.ylabel("dB")
+    plt.axis([10, 100e3, -50, 20])
     plt.show()
 
     db_1k_norm = []
