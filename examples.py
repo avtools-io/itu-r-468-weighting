@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 from itu_r_468_weighting.constants import (
     DB_TOLERANCE,
     ITU_R_468__FREQS,
@@ -21,6 +23,14 @@ if __name__ == "__main__":
     for f in ITU_R_468__FREQS:
         print(f, r468(f, "2khz"))
 
+    print("\nWith '1khz' and returns 'norm' options:\n")
+    for f in ITU_R_468__FREQS:
+        print(f, r468(f, "1khz", "norm"))
+
+    print("\nWith '2khz' and returns 'norm' options:\n")
+    for f in ITU_R_468__FREQS:
+        print(f, r468(f, "2khz", "norm"))
+
     print("\nFind max dB difference with '1khz' option:\n")
     db_values_1k = []
 
@@ -42,7 +52,33 @@ if __name__ == "__main__":
     print("Tolerance:", DB_TOLERANCE)
     print("Value <= Tolerance?:", max_2k <= DB_TOLERANCE)
 
-    # Run all integer values from 1 up to 192000 x times
-    for _ in range(15):
-        for i in range(1, 192001):
-            r468(i, "1khz")
+    db_1k = []
+    for i in range(24001):
+        db_1k.append(r468(i, "1khz"))
+
+    db_2k = []
+    for i in range(24001):
+        db_2k.append(r468(i, "2khz"))
+
+    plt.plot(db_1k)
+    plt.plot(db_2k)
+    plt.ylabel("dB")
+    plt.show()
+
+    db_1k_norm = []
+    for i in range(24001):
+        db_1k_norm.append(r468(i, "1khz", "norm"))
+
+    db_2k_norm = []
+    for i in range(24001):
+        db_2k_norm.append(r468(i, "2khz", "norm"))
+
+    plt.plot(db_1k_norm)
+    plt.plot(db_2k_norm)
+    plt.ylabel("normalized")
+    plt.show()
+
+    # # Run all integer values from 1 up to 192000 x times
+    # for _ in range(15):
+    #     for i in range(1, 192001):
+    #         r468(i, "1khz")
