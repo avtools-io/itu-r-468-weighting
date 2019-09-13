@@ -20,9 +20,10 @@ def r468(frequency_hz, khz_option, returns="db"):
         The frequency value (in Hz) must be a value greater 0.
     khz_option : str
         Choose `1khz` or `2khz` as an weighting option.
-        The weighting curves have the same shape for both options.
+        The weighting curves have a similar characteristic for both options,
+        but are using a different amplification factor.
         They are shifted in a way, that the gain is 0.0 dB
-        at the given frequency (1 kHz or 2 kHz).
+        at the given frequency (1 or 2 kHz).
 
     Returns
     -------
