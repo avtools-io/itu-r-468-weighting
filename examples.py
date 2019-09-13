@@ -1,5 +1,3 @@
-import matplotlib.pyplot as plt
-
 from itu_r_468_weighting.constants import (
     DB_TOLERANCE,
     ITU_R_468__FREQS,
@@ -52,40 +50,7 @@ if __name__ == "__main__":
     print("Tolerance:", DB_TOLERANCE)
     print("Value <= Tolerance?:", max_2k <= DB_TOLERANCE)
 
-    db_1k = []
-    for i in range(24001):
-        db_1k.append(r468(i, "1khz"))
-
-    db_2k = []
-    for i in range(24001):
-        db_2k.append(r468(i, "2khz"))
-
-    plt.plot(db_1k, "-b", label="1 kHz")
-    plt.plot(db_2k, "-r", label="2 kHz")
-    plt.legend(loc="upper left")
-    plt.xscale("symlog", linthreshy=0.015)
-    plt.grid(True)
-    plt.xlabel("Hz")
-    plt.ylabel("dB")
-    plt.axis([10, 100e3, -50, 20])
-    plt.show()
-
-    db_1k_norm = []
-    for i in range(24001):
-        db_1k_norm.append(r468(i, "1khz", "norm"))
-
-    db_2k_norm = []
-    for i in range(24001):
-        db_2k_norm.append(r468(i, "2khz", "norm"))
-
-    plt.plot(db_1k_norm, "-b", label="1 kHz")
-    plt.plot(db_2k_norm, "-r", label="2 kHz")
-    plt.legend(loc="upper left")
-    plt.xlabel("Hz")
-    plt.ylabel("Factor")
-    plt.show()
-
-    # # Run all integer values from 1 up to 192000 x times
-    # for _ in range(15):
-    #     for i in range(1, 192001):
-    #         r468(i, "1khz")
+    # Run all integer values from 1 up to 192000 x times
+    for _ in range(15):
+        for i in range(1, 192001):
+            r468(i, "1khz")
