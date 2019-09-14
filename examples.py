@@ -1,10 +1,11 @@
 from itu_r_468_weighting.constants import (
     GLOBAL_DB_TOLERANCE,
-    ITU_R_468__FREQS,
     ITU_R_468__FREQS_AND_EXP_VALS__1KHZ,
     ITU_R_468__FREQS_AND_EXP_VALS__2KHZ,
 )
 from itu_r_468_weighting.filter import r468
+
+ITU_R_468__FREQS = [f[0] for f in ITU_R_468__FREQS_AND_EXP_VALS__1KHZ]
 
 # Example usage:
 if __name__ == "__main__":

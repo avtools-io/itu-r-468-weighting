@@ -21,31 +21,6 @@ DB_GAIN_2KHZ = 12.617052124255618
 NORM_GAIN_1KHZ = 10 ** (DB_GAIN_1KHZ / 20)
 NORM_GAIN_2KHZ = 10 ** (DB_GAIN_2KHZ / 20)
 
-ITU_R_468__FREQS = [
-    # <frequency in Hz>,
-    31.5,
-    63,
-    100,
-    200,
-    400,
-    800,
-    1000,
-    2000,
-    3150,
-    4000,
-    5000,
-    6300,
-    7100,
-    8000,
-    9000,
-    10000,
-    12500,
-    14000,
-    16000,
-    20000,
-    31500,
-]
-
 ITU_R_468__FREQS_AND_EXP_VALS__1KHZ = [
     # [<frequency in Hz>, <expected value in dB>, [<lower|upper tolerances>]],
     [31.5, -29.9, [-2.0, 2.0]],
