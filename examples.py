@@ -21,6 +21,14 @@ if __name__ == "__main__":
     for f in ITU_R_468__FREQS:
         print(f, r468(f, "2khz"))
 
+    print("\nWith '1khz' and returns 'norm' options:\n")
+    for f in ITU_R_468__FREQS:
+        print(f, r468(f, "1khz", "norm"))
+
+    print("\nWith '2khz' and returns 'norm' options:\n")
+    for f in ITU_R_468__FREQS:
+        print(f, r468(f, "2khz", "norm"))
+
     print("\nFind max dB difference with '1khz' option:\n")
     db_values_1k = []
 

@@ -2,5 +2,6 @@ black
 coverage
 coveralls
 isort
+matplotlib
 pytest
 twine

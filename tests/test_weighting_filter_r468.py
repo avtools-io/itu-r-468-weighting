@@ -16,9 +16,7 @@ def test_frequency_value_that_must_succeed(start, end, khz_option):
         r468(i, khz_option)
 
 
-@pytest.mark.parametrize(
-    "hz, khz_option", [(-10, "1khz"), (0, "1khz"), (-10, "2khz"), (0, "2khz")]
-)
+@pytest.mark.parametrize("hz, khz_option", [(-10, "1khz"), (-10, "2khz")])
 def test_value_less_or_equal_to_0_that_must_raise_value_error(hz, khz_option):
     with pytest.raises(ValueError):
         r468(hz, khz_option)

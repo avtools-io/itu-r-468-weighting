@@ -7,11 +7,19 @@ Dev branch: [![Build Status](https://travis-ci.com/cinelexi/itu-r-468-weighting.
 
 ## Introduction
 
-This project consists of a sole function named `r468`. The function takes a frequency value and returns a weighted dB value. For weightening, the [ITU-R BS.468-4](https://www.itu.int/rec/R-REC-BS.468-4-198607-I/en) standard and the [SMPTE RP 2054:2010](https://ieeexplore.ieee.org/document/7290513) recommended practice are followed.
+This project consists of a sole function named `r468`. The function takes a frequency value and returns a weighted gain value. For weightening, the [ITU-R BS.468-4](https://www.itu.int/rec/R-REC-BS.468-4-198607-I/en) standard and the [SMPTE RP 2054:2010](https://ieeexplore.ieee.org/document/7290513) recommended practice are followed. The returned gain value is implicitly returned as a weighted gain value in dB, but can explicitly be returned as a weighted gain factor.
 
 The math for this project is taken from Wikipedia (as of 2019-08-08):
 
 - https://en.wikipedia.org/wiki/ITU-R_468_noise_weighting ([archived version](https://web.archive.org/web/20190808084536/https:/en.wikipedia.org/wiki/ITU-R_468_noise_weighting))
+
+### Plot of filter in frequency|gain (in dB) domain:
+
+![](images/filter_gain_db.png)
+
+### Plot of filter in frequency|gain domain:
+
+![](images/filter_gain.png)
 
 ## Installation
 
@@ -26,41 +34,17 @@ More infos on the [project page](https://pypi.org/project/itu-r-468-weighting/) 
 ```
 from itu_r_468_weighting.filter import r468
 
-r468(1000, "1khz")
-r468(1000, "2khz")
+r468(1000, "1khz")          # returns gain in dB
+r468(1000, "2khz")          # returns gain in dB
+r468(1000, "1khz", "db")    # returns gain in dB
+r468(1000, "2khz", "db")    # returns gain in dB
+r468(1000, "1khz", "norm")  # returns gain factor
+r468(1000, "2khz", "norm")  # returns gain factor
 ```
 
 ## Function Description
 
-`r468(frequency_hz, khz_option)`
-
-- Takes a frequency value and returns a weighted dB value.
-
-### Parameters
-
-`frequency_hz` : `float`
-
-- The frequency value (in Hz) must be a value greater 0.
-
-`khz_option` : `str`
-
-- Choose `1khz` or `2khz` as an weighting option.
-  The weighting curves have the same shape for both options.
-  They are shifted in a way, that the gain is 0.0 dB
-  at the given frequency (1 or 2 kHz).
-
-### Returns
-
-`float`
-
-- The dB weighted value of the frequency.
-
-### Raises
-
-`ValueError`
-
-- If parameter `frequency_hz` is not greater 0.
-- If parameter `khz_option` is not equal to `1khz` or `2khz`.
+See docstring in [function `r468`](https://github.com/cinelexi/itu-r-468-weighting/blob/master/itu_r_468_weighting/filter.py) for further description.
 
 ## Developement
 
