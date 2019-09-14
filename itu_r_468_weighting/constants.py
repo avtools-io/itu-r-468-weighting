@@ -1,8 +1,9 @@
 from math import inf
 
-# GLOBAL_DB_TOLERANCE was determined by taking the maximum value of the difference
-# between computed ("1khz" and "2khz" option) and expected ITU-R 468 values.
-# If the r468 function improves over time, this constant should converge to 0.
+# GLOBAL_DB_TOLERANCE was determined by taking the maximum value of the
+# difference between computed ("1khz" and "2khz" option) and expected ITU-R 468
+# values. If the r468 function improves over time, this constant should
+# converge to 0.
 GLOBAL_DB_TOLERANCE = 0.07184434988229427
 
 # DB_GAIN_1KHZ was first determined with the multiplication factor of 8.1333
@@ -46,7 +47,7 @@ ITU_R_468__FREQS = [
 ]
 
 ITU_R_468__FREQS_AND_EXP_VALS__1KHZ = [
-    # [<frequency in Hz>, <expected value in dB>],
+    # [<frequency in Hz>, <expected value in dB>, [<lower|upper tolerances>]],
     [31.5, -29.9, [-2.0, 2.0]],
     [63, -23.9, [-1.4, 1.4]],
     [100, -19.8, [-1.0, 1.0]],
@@ -71,7 +72,7 @@ ITU_R_468__FREQS_AND_EXP_VALS__1KHZ = [
 ]
 
 ITU_R_468__FREQS_AND_EXP_VALS__2KHZ = [
-    # [<frequency in Hz>, <expected value in dB>],
+    # [<frequency in Hz>, <expected value in dB>, [<lower|upper tolerances>]],
     # Revert 31 to 31.5 Hz, assume mistake in SMPTE RP
     [31.5, -35.5, [-2.0, 2.0]],
     [63, -29.5, [-1.4, 1.4]],
