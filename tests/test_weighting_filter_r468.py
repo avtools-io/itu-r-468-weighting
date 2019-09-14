@@ -73,12 +73,15 @@ def test_value_of_0_that_must_return_inf(hz, khz_option, returns):
         ("3khz", None),
         (1, None),
         (2.0, None),
-        ("3khz", "wrong_string_value"),
-        (1, 123),
-        (2.0, 1.23),
+        ("1khz", "wrong_string_value"),
+        ("1khz", 123),
+        ("1khz", 1.23),
+        ("2khz", "wrong_string_value"),
+        ("2khz", 123),
+        ("2khz", 1.23),
     ],
 )
-def test_wrong_khz_option_that_must_raise_value_error(khz_option, returns):
+def test_wrong_options_that_must_raise_value_error(khz_option, returns):
     if returns is None:
         with pytest.raises(ValueError):
             r468(1, khz_option)
