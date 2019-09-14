@@ -72,7 +72,8 @@ ITU_R_468__FREQS_AND_EXP_VALS__1KHZ = [
 
 ITU_R_468__FREQS_AND_EXP_VALS__2KHZ = [
     # [<frequency in Hz>, <expected value in dB>],
-    [31, -35.5, [-2.0, 2.0]],
+    # Revert 31 to 31.5 Hz, assume mistake in SMPTE RP
+    [31.5, -35.5, [-2.0, 2.0]],
     [63, -29.5, [-1.4, 1.4]],
     [100, -25.4, [-1.0, 1.0]],
     [200, -19.4, [-0.85, 0.85]],
