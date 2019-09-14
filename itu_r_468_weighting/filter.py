@@ -1,6 +1,7 @@
 from math import inf
 from math import log10
 from math import sqrt
+from typing import Union
 
 from itu_r_468_weighting.constants import (
     DB_GAIN_1KHZ,
@@ -10,7 +11,9 @@ from itu_r_468_weighting.constants import (
 )
 
 
-def r468(frequency_hz, khz_option, returns="db"):
+def r468(
+    frequency_hz: Union[int, float], khz_option: str, returns: str = "db"
+) -> float:
     """Takes a frequency value and returns a weighted gain value.
 
     For weightening, the ITU-R BS.468-4 standard and the
@@ -69,24 +72,20 @@ def r468(frequency_hz, khz_option, returns="db"):
         - (2.1181508875186556e-11 * f3)
         + (0.0005559488023498643 * f1)
     )
+    r_itu = (0.0001246332637532143 * f1) / sqrt(h1 ** 2 + h2 ** 2)
 
     if returns == "db":
-        r_itu = (0.0001246332637532143 * f1) / sqrt(h1 ** 2 + h2 ** 2)
         if khz_option == "1khz":
-            gain = DB_GAIN_1KHZ
-            return gain + 20 * log10(r_itu)
+            return DB_GAIN_1KHZ + 20 * log10(r_itu)
         elif khz_option == "2khz":
-            gain = DB_GAIN_2KHZ
-            return gain + 20 * log10(r_itu)
+            return DB_GAIN_2KHZ + 20 * log10(r_itu)
         else:
             raise ValueError
     elif returns == "norm":
         if khz_option == "1khz":
-            gain = NORM_GAIN_1KHZ
-            return gain * 0.0001246332637532143 * f1 / sqrt(h1 ** 2 + h2 ** 2)
+            return NORM_GAIN_1KHZ * r_itu
         elif khz_option == "2khz":
-            gain = NORM_GAIN_2KHZ
-            return gain * 0.0001246332637532143 * f1 / sqrt(h1 ** 2 + h2 ** 2)
+            return NORM_GAIN_2KHZ * r_itu
         else:
             raise ValueError
     else:
