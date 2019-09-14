@@ -46,6 +46,34 @@ r468(1000, "2khz", "norm")  # returns gain factor
 
 See docstring in [function `r468`](https://github.com/cinelexi/itu-r-468-weighting/blob/master/itu_r_468_weighting/filter.py) for description.
 
-## Developement
+## Development
+
+### Setup virtualenv, activate dev environment and install dev dependencies
+
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements_dev.txt
+```
+
+### Run tests and examine code coverage
+
+```
+pytest --cov=itu_r_468_weighting
+```
+
+### Contributing
+
+Always develop on `ftr` branches or `fix` branches and do a pull request on
+the `dev` branch.
+
+Afer code changes always run isort and black (in this order).
+You can also use following script:
+
+```
+bash format_code.sh
+```
+
+## Project page
 
 This project is hosted on [GitHub](https://github.com/cinelexi/itu-r-468-weighting).
