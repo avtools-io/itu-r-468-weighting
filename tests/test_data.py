@@ -1,24 +1,10 @@
 from math import inf
 
-# GLOBAL_DB_TOLERANCE was determined by taking the maximum value of the difference
-# between computed ("1khz" and "2khz" option) and expected ITU-R 468 values.
-# If the r468 function improves over time, this constant should converge to 0.
+# GLOBAL_DB_TOLERANCE was determined by taking the maximum value of the
+# difference between computed ("1khz" and "2khz" option) and expected
+# ITU-R 468 values. If the r468 function improves over time, this constant
+# should converge to 0.
 GLOBAL_DB_TOLERANCE = 0.07184434988229427
-
-# DB_GAIN_1KHZ was first determined with the multiplication factor of 8.1333
-# (+18.20533583440004 dB). From there on the value was modified to find
-# a better one, by converging the distance to 0 at 1000 Hz and 12500 Hz, having
-# the same value for both: r468(1000, "1khz") == r468(12500, "1khz")
-DB_GAIN_1KHZ = 18.246265068039158
-
-# DB_GAIN_2KHZ was determined by substracting the dB value at 2000 Hz (of
-# the "1khz" option result) from and adding the value at 1000 Hz (of the "1khz"
-# option result) to the value of DB_GAIN_1KHZ:
-# DB_GAIN_2KHZ = DB_GAIN_1KHZ - r468(2000, "1khz") + r468(1000, "1khz")
-DB_GAIN_2KHZ = 12.617052124255618
-
-NORM_GAIN_1KHZ = 10 ** (DB_GAIN_1KHZ / 20)
-NORM_GAIN_2KHZ = 10 ** (DB_GAIN_2KHZ / 20)
 
 ITU_R_468__FREQS = [
     # <frequency in Hz>,
