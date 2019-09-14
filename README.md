@@ -13,11 +13,11 @@ The math for this project is taken from Wikipedia (as of 2019-08-08):
 
 - https://en.wikipedia.org/wiki/ITU-R_468_noise_weighting ([archived version](https://web.archive.org/web/20190808084536/https:/en.wikipedia.org/wiki/ITU-R_468_noise_weighting))
 
-### Plot of filter in frequency|gain (in dB) domain:
+### Filter with gain in dB (default or "db" option):
 
 ![](https://raw.githubusercontent.com/cinelexi/itu-r-468-weighting/master/images/filter_gain_db.png)
 
-### Plot of filter in frequency|gain domain:
+### Filter with gain factor ("norm" option):
 
 ![](https://raw.githubusercontent.com/cinelexi/itu-r-468-weighting/master/images/filter_gain.png)
 
