@@ -1,4 +1,6 @@
-from math import log10, sqrt
+from math import inf
+from math import log10
+from math import sqrt
 
 from itu_r_468_weighting.constants import (
     DB_GAIN_1KHZ,
@@ -44,7 +46,7 @@ def r468(frequency_hz, khz_option, returns="db"):
     if frequency_hz > 0:
         pass
     elif frequency_hz == 0:
-        return float("-inf")
+        return inf
     else:
         raise ValueError
 
