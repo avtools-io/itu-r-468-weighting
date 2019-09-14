@@ -9,7 +9,7 @@ from itu_r_468_weighting.constants import (
 
 
 def r468(frequency_hz, khz_option, returns="db"):
-    """Takes a frequency value and returns a weighted dB value.
+    """Takes a frequency value and returns a weighted gain value.
 
     For weightening, the ITU-R BS.468-4 standard and the
     SMPTE RP 2054:2010 recommended practice are followed.
@@ -24,11 +24,15 @@ def r468(frequency_hz, khz_option, returns="db"):
         but are using a different amplification factor.
         They are shifted in a way, that the gain is 0.0 dB
         at the given frequency (1 or 2 kHz).
+    returns : str
+        Choose `db` or `norm` as option. `db` will output the
+        weighted gain value in dB. `norm` will output the weighted
+        gain value as a factor.
 
     Returns
     -------
     float
-        The dB weighted value of the frequency.
+        The weighted value of the frequency.
 
     Raises
     ------
