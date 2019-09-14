@@ -70,9 +70,18 @@ def test_value_of_0_that_must_return_inf(hz, khz_option, returns):
 @pytest.mark.parametrize(
     "khz_option, returns",
     [
+        # wrong khz_option, default "returns" parameter
         ("3khz", None),
         (1, None),
         (2.0, None),
+        # wrong khz_option, correct "returns" parameter
+        ("3khz", "db"),
+        (1, "db"),
+        (2.0, "db"),
+        ("3khz", "norm"),
+        (1, "norm"),
+        (2.0, "norm"),
+        # correct "khz_option", wrong "returns" parameter
         ("1khz", "wrong_string_value"),
         ("1khz", 123),
         ("1khz", 1.23),
