@@ -13,13 +13,13 @@ The math for this project is taken from Wikipedia (as of 2019-08-08):
 
 - https://en.wikipedia.org/wiki/ITU-R_468_noise_weighting ([archived version](https://web.archive.org/web/20190808084536/https:/en.wikipedia.org/wiki/ITU-R_468_noise_weighting))
 
-### Filter in dB:
+### Plot of filter in frequency|gain (in dB) domain:
 
-![](images/filter_db.png)
+![](images/filter_gain_db.png)
 
-### Filter amplification factor:
+### Plot of filter in frequency|gain domain:
 
-![](images/filter_amp_factor.png)
+![](images/filter_gain.png)
 
 ## Installation
 
