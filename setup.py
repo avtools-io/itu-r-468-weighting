@@ -8,7 +8,7 @@ with open(path.join(here, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="itu-r-468-weighting",
-    version="1.0.4",
+    version="1.1.0",
     description="A zero dependency Python ITU-R 468 noise weighting filter (1 kHz and 2 kHz)",
     long_description=long_description,
     long_description_content_type="text/markdown",
