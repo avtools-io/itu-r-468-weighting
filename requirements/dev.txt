@@ -4,4 +4,5 @@ coveralls
 isort
 matplotlib
 pytest
+pytest-cov
 twine
