@@ -44,7 +44,7 @@ r468(1000, "2khz", "norm")  # returns gain factor
 
 ## Function Description
 
-See docstring in [function `r468`](https://github.com/cinelexi/itu-r-468-weighting/blob/master/itu_r_468_weighting/filter.py) for further description.
+See docstring in [function `r468`](https://github.com/cinelexi/itu-r-468-weighting/blob/master/itu_r_468_weighting/filter.py) for description.
 
 ## Developement
 
