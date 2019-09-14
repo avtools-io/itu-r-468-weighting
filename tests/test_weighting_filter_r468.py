@@ -1,5 +1,6 @@
-import pytest
 from math import inf
+
+import pytest
 
 from itu_r_468_weighting.constants import (
     GLOBAL_DB_TOLERANCE,

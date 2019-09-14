@@ -1,6 +1,4 @@
-from math import inf
-from math import log10
-from math import sqrt
+from math import inf, log10, sqrt
 from typing import Union
 
 from itu_r_468_weighting.constants import (
@@ -21,7 +19,7 @@ def r468(
 
     Parameters
     ----------
-    frequency_hz : float
+    frequency_hz : int or float
         The frequency value (in Hz) must be a value greater 0.
     khz_option : str
         Choose `1khz` or `2khz` as an weighting option.
