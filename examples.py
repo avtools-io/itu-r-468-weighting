@@ -1,5 +1,5 @@
 from itu_r_468_weighting.constants import (
-    DB_TOLERANCE,
+    GLOBAL_DB_TOLERANCE,
     ITU_R_468__FREQS,
     ITU_R_468__FREQS_AND_EXP_VALS__1KHZ,
     ITU_R_468__FREQS_AND_EXP_VALS__2KHZ,
@@ -37,8 +37,8 @@ if __name__ == "__main__":
 
     max_1k = max(db_values_1k)
     print("Max      :", max_1k)
-    print("Tolerance:", DB_TOLERANCE)
-    print("Value <= Tolerance?:", max_1k <= DB_TOLERANCE)
+    print("Tolerance:", GLOBAL_DB_TOLERANCE)
+    print("Value <= Tolerance?:", max_1k <= GLOBAL_DB_TOLERANCE)
 
     print("\nFind max dB difference with '2khz' option:\n")
     db_values_2k = []
@@ -47,8 +47,8 @@ if __name__ == "__main__":
 
     max_2k = max(db_values_2k)
     print("Max      :", max_2k)
-    print("Tolerance:", DB_TOLERANCE)
-    print("Value <= Tolerance?:", max_2k <= DB_TOLERANCE)
+    print("Tolerance:", GLOBAL_DB_TOLERANCE)
+    print("Value <= Tolerance?:", max_2k <= GLOBAL_DB_TOLERANCE)
 
     # Run all integer values from 1 up to 192000 x times
     for _ in range(15):
