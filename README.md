@@ -15,11 +15,11 @@ The math for this project is taken from Wikipedia (as of 2019-08-08):
 
 ### Plot of filter in frequency|gain (in dB) domain:
 
-![](images/filter_gain_db.png)
+![](https://raw.githubusercontent.com/cinelexi/itu-r-468-weighting/master/images/filter_gain_db.png)
 
 ### Plot of filter in frequency|gain domain:
 
-![](images/filter_gain.png)
+![](https://raw.githubusercontent.com/cinelexi/itu-r-468-weighting/master/images/filter_gain.png)
 
 ## Installation
 
