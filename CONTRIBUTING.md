@@ -21,7 +21,7 @@ the `dev` branch.
 
 ## Code formatting
 
-Afer code changes always run isort and black (in this order).
+After code changes always run isort and black (in this order).
 You can also use following script:
 
 ```
