@@ -4,8 +4,6 @@ from itu_r_468_weighting.constants import (
 )
 from itu_r_468_weighting.filter import r468
 
-ITU_R_468__FREQS = [f.frequency for f in ITU_R_468__FREQS_AND_EXP_VALS]
-
 # Example usage:
 if __name__ == "__main__":
 
@@ -14,22 +12,26 @@ if __name__ == "__main__":
     print("r468(1000, '2khz'):", r468(1000, "2khz"))
 
     print("\nWith '1khz' option:\n")
-    for f in ITU_R_468__FREQS:
-        print(f, r468(f, "1khz"))
-
-    print("\nWith '2khz' option:\n")
-    for f in ITU_R_468__FREQS:
-        print(f, r468(f, "2khz"))
+    for f in ITU_R_468__FREQS_AND_EXP_VALS:
+        if f.khz_option is "1khz":
+            print(f.frequency, r468(f.frequency, "1khz"))
 
     print("\nWith '1khz' and returns 'norm' options:\n")
-    for f in ITU_R_468__FREQS:
-        print(f, r468(f, "1khz", "norm"))
+    for f in ITU_R_468__FREQS_AND_EXP_VALS:
+        if f.khz_option is "1khz":
+            print(f.frequency, r468(f.frequency, "1khz", "norm"))
+
+    print("\nWith '2khz' option:\n")
+    for f in ITU_R_468__FREQS_AND_EXP_VALS:
+        if f.khz_option is "2khz":
+            print(f.frequency, r468(f.frequency, "2khz"))
 
     print("\nWith '2khz' and returns 'norm' options:\n")
-    for f in ITU_R_468__FREQS:
-        print(f, r468(f, "2khz", "norm"))
+    for f in ITU_R_468__FREQS_AND_EXP_VALS:
+        if f.khz_option is "2khz":
+            print(f.frequency, r468(f.frequency, "2khz", "norm"))
 
-    print("\nFind max dB difference with '1khz' option:\n")
+    print("\nFind max dB difference:\n")
     db_values = [
         abs(f.expected_db - r468(f.frequency, f.khz_option))
         for f in ITU_R_468__FREQS_AND_EXP_VALS
