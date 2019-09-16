@@ -9,9 +9,7 @@ from itu_r_468_weighting.constants import (
 )
 
 
-def r468(
-    frequency_hz: Union[int, float], khz_option: str, returns: str = "db"
-) -> float:
+def r468(frequency_hz: Union[int, float], khz_option: str, returns: str) -> float:
     """Takes a frequency value and returns a weighted gain value.
 
     For weightening, the ITU-R BS.468-4 standard and the

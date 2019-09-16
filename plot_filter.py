@@ -6,11 +6,11 @@ if __name__ == "__main__":
 
     db_1k = []
     for i in range(24001):
-        db_1k.append(r468(i, "1khz"))
+        db_1k.append(r468(i, "1khz", "db"))
 
     db_2k = []
     for i in range(24001):
-        db_2k.append(r468(i, "2khz"))
+        db_2k.append(r468(i, "2khz", "db"))
 
     plt.plot(db_1k, "-b", label="1 kHz")
     plt.plot(db_2k, "-r", label="2 kHz")
