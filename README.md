@@ -15,11 +15,11 @@ The math for this project is taken from Wikipedia (as of 2019-08-08):
 
 ### Filter with gain in dB ("db" option):
 
-![](images/filter_gain_db.png)
+![](https://raw.githubusercontent.com/cinelexi/itu-r-468-weighting/master/images/filter_gain_db.png)
 
 ### Filter with gain factor ("factor" option):
 
-![](images/filter_gain.png)
+![](https://raw.githubusercontent.com/cinelexi/itu-r-468-weighting/master/images/filter_gain.png)
 
 ## Installation
 
