@@ -2,10 +2,7 @@ from math import inf
 
 import pytest
 
-from itu_r_468_weighting.constants import (
-    GLOBAL_DB_TOLERANCE,
-    ITU_R_468__FREQS_AND_EXP_VALS,
-)
+from .constants import GLOBAL_DB_TOLERANCE, ITU_R_468__FREQS_AND_EXP_VALS
 from itu_r_468_weighting.filter import r468
 
 

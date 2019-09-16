@@ -1,7 +1,4 @@
-from itu_r_468_weighting.constants import (
-    GLOBAL_DB_TOLERANCE,
-    ITU_R_468__FREQS_AND_EXP_VALS,
-)
+from tests.constants import GLOBAL_DB_TOLERANCE, ITU_R_468__FREQS_AND_EXP_VALS
 from itu_r_468_weighting.filter import r468
 
 # Example usage:
@@ -16,15 +13,15 @@ if __name__ == "__main__":
         if f.khz_option is "1khz":
             print(f.frequency, r468(f.frequency, "1khz"))
 
-    print("\nWith '1khz' and returns 'norm' options:\n")
-    for f in ITU_R_468__FREQS_AND_EXP_VALS:
-        if f.khz_option is "1khz":
-            print(f.frequency, r468(f.frequency, "1khz", "norm"))
-
     print("\nWith '2khz' option:\n")
     for f in ITU_R_468__FREQS_AND_EXP_VALS:
         if f.khz_option is "2khz":
             print(f.frequency, r468(f.frequency, "2khz"))
+
+    print("\nWith '1khz' and returns 'norm' options:\n")
+    for f in ITU_R_468__FREQS_AND_EXP_VALS:
+        if f.khz_option is "1khz":
+            print(f.frequency, r468(f.frequency, "1khz", "norm"))
 
     print("\nWith '2khz' and returns 'norm' options:\n")
     for f in ITU_R_468__FREQS_AND_EXP_VALS:
