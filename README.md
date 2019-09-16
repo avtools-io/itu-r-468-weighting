@@ -17,7 +17,7 @@ The math for this project is taken from Wikipedia (as of 2019-08-08):
 
 ![](https://raw.githubusercontent.com/cinelexi/itu-r-468-weighting/master/images/filter_gain_db.png)
 
-### Filter with gain factor ("norm" option):
+### Filter with gain factor ("factor" option):
 
 ![](https://raw.githubusercontent.com/cinelexi/itu-r-468-weighting/master/images/filter_gain.png)
 
@@ -38,8 +38,8 @@ r468(1000, "1khz")          # returns gain in dB
 r468(1000, "2khz")          # returns gain in dB
 r468(1000, "1khz", "db")    # returns gain in dB
 r468(1000, "2khz", "db")    # returns gain in dB
-r468(1000, "1khz", "norm")  # returns gain factor
-r468(1000, "2khz", "norm")  # returns gain factor
+r468(1000, "1khz", "factor")  # returns gain factor
+r468(1000, "2khz", "factor")  # returns gain factor
 ```
 
 ## Function Description

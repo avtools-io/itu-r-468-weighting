@@ -18,15 +18,15 @@ if __name__ == "__main__":
         if f.khz_option is "2khz":
             print(f.frequency, r468(f.frequency, "2khz"))
 
-    print("\nWith '1khz' and returns 'norm' options:\n")
+    print("\nWith '1khz' and returns 'factor' options:\n")
     for f in ITU_R_468__FREQS_AND_EXP_VALS:
         if f.khz_option is "1khz":
-            print(f.frequency, r468(f.frequency, "1khz", "norm"))
+            print(f.frequency, r468(f.frequency, "1khz", "factor"))
 
-    print("\nWith '2khz' and returns 'norm' options:\n")
+    print("\nWith '2khz' and returns 'factor' options:\n")
     for f in ITU_R_468__FREQS_AND_EXP_VALS:
         if f.khz_option is "2khz":
-            print(f.frequency, r468(f.frequency, "2khz", "norm"))
+            print(f.frequency, r468(f.frequency, "2khz", "factor"))
 
     print("\nFind max dB difference:\n")
     db_values = [

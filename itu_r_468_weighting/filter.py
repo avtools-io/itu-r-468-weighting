@@ -4,8 +4,8 @@ from typing import Union
 from itu_r_468_weighting.constants import (
     DB_GAIN_1KHZ,
     DB_GAIN_2KHZ,
-    NORM_GAIN_1KHZ,
-    NORM_GAIN_2KHZ,
+    FACTOR_GAIN_1KHZ,
+    FACTOR_GAIN_2KHZ,
 )
 
 
@@ -28,8 +28,8 @@ def r468(
         They are shifted in a way, that the gain is 0.0 dB
         at the given frequency (1 or 2 kHz).
     returns : str
-        Choose `db` or `norm` as option. `db` will output the
-        weighted gain value in dB. `norm` will output the weighted
+        Choose `db` or `factor` as option. `db` will output the
+        weighted gain value in dB. `factor` will output the weighted
         gain value as a factor.
 
     Returns
@@ -79,11 +79,11 @@ def r468(
             return DB_GAIN_2KHZ + 20 * log10(r_itu)
         else:
             raise ValueError
-    elif returns == "norm":
+    elif returns == "factor":
         if khz_option == "1khz":
-            return NORM_GAIN_1KHZ * r_itu
+            return FACTOR_GAIN_1KHZ * r_itu
         elif khz_option == "2khz":
-            return NORM_GAIN_2KHZ * r_itu
+            return FACTOR_GAIN_2KHZ * r_itu
         else:
             raise ValueError
     else:
