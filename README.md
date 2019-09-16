@@ -7,7 +7,7 @@ Dev branch: [![Build Status](https://travis-ci.com/cinelexi/itu-r-468-weighting.
 
 ## Introduction
 
-This project consists of a sole function named `r468`. The function takes a frequency value and returns a weighted gain value. For weightening, the [ITU-R BS.468-4](https://www.itu.int/rec/R-REC-BS.468-4-198607-I/en) standard and the [SMPTE RP 2054:2010](https://ieeexplore.ieee.org/document/7290513) recommended practice are followed.
+This project consists of a sole function named `r468()`. The function takes a frequency value and returns a weighted gain value. For weightening, the [ITU-R BS.468-4](https://www.itu.int/rec/R-REC-BS.468-4-198607-I/en) standard and the [SMPTE RP 2054:2010](https://ieeexplore.ieee.org/document/7290513) recommended practice are followed.
 
 The math for this project is taken from Wikipedia (as of 2019-08-08):
 
@@ -27,7 +27,7 @@ The math for this project is taken from Wikipedia (as of 2019-08-08):
 pip install itu-r-468-weighting
 ```
 
-More infos on the [project page](https://pypi.org/project/itu-r-468-weighting/) at PyPI.
+More infos on the project page at [PyPI](https://pypi.org/project/itu-r-468-weighting/).
 
 ## Example Usage
 
