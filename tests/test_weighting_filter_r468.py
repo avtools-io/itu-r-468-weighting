@@ -101,14 +101,14 @@ def test_wrong_options_that_must_raise_value_error(khz_option, returns):
 
 
 @pytest.mark.parametrize(
-    "freqs", [freqs for freqs in ITU_R_468__FREQS_AND_EXP_VALS__1KHZ]
+    "freqs", ITU_R_468__FREQS_AND_EXP_VALS__1KHZ
 )
 def test_r468__against_itu_r_468_1khz_value_specs(freqs):
     assert abs(freqs[1] - r468(freqs[0], "1khz")) <= GLOBAL_DB_TOLERANCE
 
 
 @pytest.mark.parametrize(
-    "freqs", [freqs for freqs in ITU_R_468__FREQS_AND_EXP_VALS__1KHZ]
+    "freqs", ITU_R_468__FREQS_AND_EXP_VALS__1KHZ
 )
 def test_r468__against_itu_r_468_1khz_value_specs_tolerances(freqs):
     assert round(freqs[1] - r468(freqs[0], "1khz"), 1) >= freqs[2][0]
@@ -116,14 +116,14 @@ def test_r468__against_itu_r_468_1khz_value_specs_tolerances(freqs):
 
 
 @pytest.mark.parametrize(
-    "freqs", [freqs for freqs in ITU_R_468__FREQS_AND_EXP_VALS__2KHZ]
+    "freqs", ITU_R_468__FREQS_AND_EXP_VALS__2KHZ
 )
 def test_r468__against_itu_r_468_2khz_value_specs(freqs):
     assert abs(freqs[1] - r468(freqs[0], "2khz")) <= GLOBAL_DB_TOLERANCE
 
 
 @pytest.mark.parametrize(
-    "freqs", [freqs for freqs in ITU_R_468__FREQS_AND_EXP_VALS__2KHZ]
+    "freqs", ITU_R_468__FREQS_AND_EXP_VALS__2KHZ
 )
 def test_r468__against_itu_r_468_2khz_value_specs_tolerances(freqs):
     assert round(freqs[1] - r468(freqs[0], "2khz"), 1) >= freqs[2][0]
