@@ -1,5 +1,5 @@
-from math import inf
 from collections import namedtuple
+from math import inf
 
 # GLOBAL_DB_TOLERANCE was determined by taking the maximum value of the
 # difference between computed ("1khz" and "2khz" option) and expected ITU-R 468

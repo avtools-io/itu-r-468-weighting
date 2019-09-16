@@ -1,5 +1,5 @@
-from tests.constants import GLOBAL_DB_TOLERANCE, ITU_R_468__FREQS_AND_EXP_VALS
 from itu_r_468_weighting.filter import r468
+from tests.constants import GLOBAL_DB_TOLERANCE, ITU_R_468__FREQS_AND_EXP_VALS
 
 # Example usage:
 if __name__ == "__main__":

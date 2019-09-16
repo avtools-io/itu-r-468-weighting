@@ -2,8 +2,9 @@ from math import inf
 
 import pytest
 
-from .constants import GLOBAL_DB_TOLERANCE, ITU_R_468__FREQS_AND_EXP_VALS
 from itu_r_468_weighting.filter import r468
+
+from .constants import GLOBAL_DB_TOLERANCE, ITU_R_468__FREQS_AND_EXP_VALS
 
 
 @pytest.mark.parametrize(
