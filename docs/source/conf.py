@@ -55,3 +55,6 @@ html_theme = "alabaster"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
+# Sphinx error: master file [..]/checkouts/latest/contents.rst not found
+# https://github.com/readthedocs/readthedocs.org/issues/2569
+master_doc = "index"
