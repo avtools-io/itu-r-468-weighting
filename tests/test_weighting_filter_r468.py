@@ -100,7 +100,7 @@ def test_wrong_options_that_must_raise_value_error(khz_option, returns):
 @pytest.mark.parametrize("datum", ITU_R_468__FREQS_AND_EXP_VALS)
 def test_r468__against_itu_r_468_1khz_value_specs(datum):
     assert (
-        abs(datum.expected_db - r468(datum.frequency, datum.khz_option))
+        abs(datum.expected_db - r468(datum.frequency_hz, datum.khz_option))
         <= GLOBAL_DB_TOLERANCE
     )
 
@@ -108,10 +108,10 @@ def test_r468__against_itu_r_468_1khz_value_specs(datum):
 @pytest.mark.parametrize("datum", ITU_R_468__FREQS_AND_EXP_VALS)
 def test_r468__against_itu_r_468_1khz_value_specs_tolerances(datum):
     assert (
-        round(datum.expected_db - r468(datum.frequency, datum.khz_option), 1)
+        round(datum.expected_db - r468(datum.frequency_hz, datum.khz_option), 1)
         >= datum.lower_tolerance
     )
     assert (
-        round(datum.expected_db - r468(datum.frequency, datum.khz_option), 1)
+        round(datum.expected_db - r468(datum.frequency_hz, datum.khz_option), 1)
         <= datum.upper_tolerance
     )

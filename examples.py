@@ -11,26 +11,26 @@ if __name__ == "__main__":
     print("\nWith '1khz' option:\n")
     for f in ITU_R_468__FREQS_AND_EXP_VALS:
         if f.khz_option is "1khz":
-            print(f.frequency, r468(f.frequency, "1khz"))
+            print(f.frequency_hz, r468(f.frequency_hz, "1khz"))
 
     print("\nWith '2khz' option:\n")
     for f in ITU_R_468__FREQS_AND_EXP_VALS:
         if f.khz_option is "2khz":
-            print(f.frequency, r468(f.frequency, "2khz"))
+            print(f.frequency_hz, r468(f.frequency_hz, "2khz"))
 
     print("\nWith '1khz' and returns 'factor' options:\n")
     for f in ITU_R_468__FREQS_AND_EXP_VALS:
         if f.khz_option is "1khz":
-            print(f.frequency, r468(f.frequency, "1khz", "factor"))
+            print(f.frequency_hz, r468(f.frequency_hz, "1khz", "factor"))
 
     print("\nWith '2khz' and returns 'factor' options:\n")
     for f in ITU_R_468__FREQS_AND_EXP_VALS:
         if f.khz_option is "2khz":
-            print(f.frequency, r468(f.frequency, "2khz", "factor"))
+            print(f.frequency_hz, r468(f.frequency_hz, "2khz", "factor"))
 
     print("\nFind max dB difference:\n")
     db_values = [
-        abs(f.expected_db - r468(f.frequency, f.khz_option))
+        abs(f.expected_db - r468(f.frequency_hz, f.khz_option))
         for f in ITU_R_468__FREQS_AND_EXP_VALS
     ]
 
