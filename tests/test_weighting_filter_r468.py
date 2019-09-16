@@ -4,8 +4,7 @@ import pytest
 
 from itu_r_468_weighting.constants import (
     GLOBAL_DB_TOLERANCE,
-    ITU_R_468__FREQS_AND_EXP_VALS__1KHZ,
-    ITU_R_468__FREQS_AND_EXP_VALS__2KHZ,
+    ITU_R_468__FREQS_AND_EXP_VALS,
 )
 from itu_r_468_weighting.filter import r468
 
@@ -100,31 +99,21 @@ def test_wrong_options_that_must_raise_value_error(khz_option, returns):
             r468(1, khz_option, returns)
 
 
-@pytest.mark.parametrize(
-    "freqs", ITU_R_468__FREQS_AND_EXP_VALS__1KHZ
-)
-def test_r468__against_itu_r_468_1khz_value_specs(freqs):
-    assert abs(freqs[1] - r468(freqs[0], "1khz")) <= GLOBAL_DB_TOLERANCE
+@pytest.mark.parametrize("datum", ITU_R_468__FREQS_AND_EXP_VALS)
+def test_r468__against_itu_r_468_1khz_value_specs(datum):
+    assert (
+        abs(datum.expected_db - r468(datum.frequency, datum.khz_option))
+        <= GLOBAL_DB_TOLERANCE
+    )
 
 
-@pytest.mark.parametrize(
-    "freqs", ITU_R_468__FREQS_AND_EXP_VALS__1KHZ
-)
-def test_r468__against_itu_r_468_1khz_value_specs_tolerances(freqs):
-    assert round(freqs[1] - r468(freqs[0], "1khz"), 1) >= freqs[2][0]
-    assert round(freqs[1] - r468(freqs[0], "1khz"), 1) <= freqs[2][1]
-
-
-@pytest.mark.parametrize(
-    "freqs", ITU_R_468__FREQS_AND_EXP_VALS__2KHZ
-)
-def test_r468__against_itu_r_468_2khz_value_specs(freqs):
-    assert abs(freqs[1] - r468(freqs[0], "2khz")) <= GLOBAL_DB_TOLERANCE
-
-
-@pytest.mark.parametrize(
-    "freqs", ITU_R_468__FREQS_AND_EXP_VALS__2KHZ
-)
-def test_r468__against_itu_r_468_2khz_value_specs_tolerances(freqs):
-    assert round(freqs[1] - r468(freqs[0], "2khz"), 1) >= freqs[2][0]
-    assert round(freqs[1] - r468(freqs[0], "2khz"), 1) <= freqs[2][1]
+@pytest.mark.parametrize("datum", ITU_R_468__FREQS_AND_EXP_VALS)
+def test_r468__against_itu_r_468_1khz_value_specs_tolerances(datum):
+    assert (
+        round(datum.expected_db - r468(datum.frequency, datum.khz_option), 1)
+        >= datum.lower_tolerance
+    )
+    assert (
+        round(datum.expected_db - r468(datum.frequency, datum.khz_option), 1)
+        <= datum.upper_tolerance
+    )
