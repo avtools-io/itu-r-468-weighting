@@ -6,5 +6,6 @@ install:
 script:
   - coverage run -m pytest
   - coverage report
+  - sh ./check_formatting.sh
 after_success:
   - coveralls
