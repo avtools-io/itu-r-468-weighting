@@ -49,14 +49,12 @@ def r468(frequency_hz: Union[int, float], khz_option: str, returns: str) -> floa
     else:
         raise ValueError
 
-    f1, f2, f3, f4, f5, f6 = (
-        frequency_hz,
-        frequency_hz ** 2,
-        frequency_hz ** 3,
-        frequency_hz ** 4,
-        frequency_hz ** 5,
-        frequency_hz ** 6,
-    )
+    f1 = frequency_hz
+    f2 = f1 * f1
+    f3 = f1 * f2
+    f4 = f2 * f2
+    f5 = f1 * f4
+    f6 = f3 * f3
     h1 = (
         (-4.7373389813783836e-24 * f6)
         + (2.0438283336061252e-15 * f4)
@@ -68,7 +66,7 @@ def r468(frequency_hz: Union[int, float], khz_option: str, returns: str) -> floa
         - (2.1181508875186556e-11 * f3)
         + (0.0005559488023498643 * f1)
     )
-    r_itu = (0.0001246332637532143 * f1) / sqrt(h1 ** 2 + h2 ** 2)
+    r_itu = (0.0001246332637532143 * f1) / sqrt(h1 * h1  + h2 * h2)
 
     if returns == "db":
         if khz_option == "1khz":
