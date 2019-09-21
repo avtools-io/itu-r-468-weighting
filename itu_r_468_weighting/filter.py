@@ -66,7 +66,7 @@ def r468(frequency_hz: Union[int, float], khz_option: str, returns: str) -> floa
         - (2.1181508875186556e-11 * f3)
         + (0.0005559488023498643 * f1)
     )
-    r_itu = (0.0001246332637532143 * f1) / sqrt(h1 * h1  + h2 * h2)
+    r_itu = (0.0001246332637532143 * f1) / sqrt(h1 * h1 + h2 * h2)
 
     if returns == "db":
         if khz_option == "1khz":
