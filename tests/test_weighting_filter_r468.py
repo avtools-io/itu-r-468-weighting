@@ -44,8 +44,8 @@ def test_value_lt_0_that_must_raise_value_error(hz, khz_option, returns):
         (0, "2khz", "factor"),
     ],
 )
-def test_value_of_0_that_must_return_inf(hz, khz_option, returns):
-    assert r468(hz, khz_option, returns) == inf
+def test_hz_value_of_0_must_return_0(hz, khz_option, returns):
+    assert r468(hz, khz_option, returns) == 0.0
 
 
 @pytest.mark.parametrize(

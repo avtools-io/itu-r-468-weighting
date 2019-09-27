@@ -42,10 +42,8 @@ def r468(frequency_hz: Union[int, float], khz_option: str, returns: str) -> floa
         If parameter `khz_option` is not equal to `1khz` or `2khz`.
     """
 
-    if frequency_hz > 0:
+    if frequency_hz >= 0:
         pass
-    elif frequency_hz == 0:
-        return inf
     else:
         raise ValueError
 
@@ -70,9 +68,9 @@ def r468(frequency_hz: Union[int, float], khz_option: str, returns: str) -> floa
 
     if returns == "db":
         if khz_option == "1khz":
-            return DB_GAIN_1KHZ + 20 * log10(r_itu)
+            return 0.0 if r_itu == 0.0 else DB_GAIN_1KHZ + 20.0 * log10(r_itu)
         elif khz_option == "2khz":
-            return DB_GAIN_2KHZ + 20 * log10(r_itu)
+            return 0.0 if r_itu == 0.0 else DB_GAIN_2KHZ + 20.0 * log10(r_itu)
         else:
             raise ValueError
     elif returns == "factor":
